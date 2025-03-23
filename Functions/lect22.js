@@ -1,10 +1,11 @@
 /*
-function exprition 
-arrow function 
 
+-- function exprition 
+-- Arrow function 
 
 Note:: the function its not statment its varible
 Note:: consol.log();by defult return undefind
+
 */
 
 //This is function declarition
@@ -13,11 +14,14 @@ function funcTest(name) {
 }
 
 /*
-
-let x =10;
-
-its save in Main memory like :: 
-x:10
+ Notes::
+ 
+ let x =10;
+ its save in Main memory like :: 
+ x:10
+but 
+let funcTest =function(name){body}
+its save in Main memory like ::  
 funcTest :function(name){body}
 
 Note ::
