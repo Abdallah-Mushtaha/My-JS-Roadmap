@@ -1,4 +1,4 @@
-# JavaScript Learning Notes
+## JavaScript Learning Notes
 
 This folder contains everything I have learned and am learning in JavaScript, including:
 
