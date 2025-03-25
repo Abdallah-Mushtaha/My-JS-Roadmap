@@ -1,0 +1,84 @@
+We previously mentioned that there are
+environments for JavaScript::
+browser => like DOM
+desktop => Electron
+React Native => mobile application
+Node => backend - Server-side code
+Note::
+console.log() => it's a JS environment
+
+Now, the garbage collection in JS, I understood that I need to clean up code that does not access anything.
+There is a concept called reachability, which means that if a function has parameters and has a call operation,
+then it is reachable. If there is a nested function (subfunction), it is also reachable.
+
+There is a third case called root. If any part of the code does not have a root, it is not reachable,
+which means it can be deleted from memory.
+
+Every index.js has a global scope.
+If there is a path from the root, it is then called reachable.
+
+Garbage collection => automatically performed  
+When we declare a variable, function, or others, we are using memory,
+so we need to execute the code with the least possible memory consumption.
+
+Garbage Collection in JavaScript
+
+Purpose of Garbage Collection:
+
+- Cleans up memory from unused data (such as variables, objects, functions).
+- It is done automatically without the programmer's intervention.
+
+Concept of Reachability:
+
+- An object is considered Reachable if there is a way to access it through a Root.
+
+Main Roots:
+
+- `window` in the browser or `global` in Node.js.
+- Variables in the Call Stack (such as parameters and results inside functions).
+- Objects linked to other objects that are still Reachable.
+
+Reachable Object Cases:
+
+- An object stored in a global variable.
+- An object inside a function that is being called.
+- An object inside another accessible object.
+
+Unreachable Object Cases (which get deleted from memory):
+
+- When all references to it are removed, meaning no variable or function can access it.
+- If the object is part of a function that has finished execution and was not stored elsewhere.
+- If it has no Root connecting it to the running code.
+
+Internal Algorithm => called "Mark and Sweep" => 'Garbage Collection Algorithm'
+
+- It will mark the root to remember it later.
+- So they mark the root by "visiting it" to avoid visiting it twice in the future.
+- Marking refers to references, not reachability.
+- When there is no reference to an object or variable, it will be deleted by the sweep process.
+
+This is the concept of how garbage collection works. JavaScript engines apply many optimizations
+to make it run faster and avoid delays in code execution.
+
+The Mark and Sweep execution may run multiple times by JavaScript Engines.
+
+Types of Mark and Sweep "Garbage Collection Optimization":
+
+- Some of the optimizations are:
+
+1. **Generational Collection:** Splits objects into old and new objects.
+
+   - Through Mark & Sweep, some variables remain static (do not change), so the JS engine understands they are standard objects.
+   - Other variables will be considered new objects since they change frequently.
+   - Example: If you have 50 objects and 30 are old, the Mark and Sweep process will only focus on the remaining 20.
+   - **Why is this done?**
+     - To reduce the time required for Mark and Sweep.
+
+2. **Incremental Collection:** Instead of performing one garbage collection process for the entire code,
+   it executes multiple garbage collections by distributing the code into sections.
+
+3. **Idle-Time Collection:** Runs garbage collection when the system is idle.
+
+"Garbage Collection is an automatic process in the JavaScript engine that frees memory from objects that no longer have references.
+This is done using the (Mark and Sweep) algorithm, where reachable objects are marked through active references, and then
+unreferenced objects are deleted to free memory. The goal is to optimize performance and prevent unnecessary memory consumption."

@@ -4,8 +4,9 @@ This folder contains everything I have learned and am learning in JavaScript, in
 
 - Variables
 - Functions
-- Arrays
 - Objects
+- GarbageCollection
+- Arrays
 - Destructuring
 - Promises
 - APIs
