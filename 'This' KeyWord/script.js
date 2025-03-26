@@ -1,5 +1,5 @@
 "use strict";
-/*   Lecture 26
+/*  
 
 Object Methods, 'this' Keyword
 objects are usually created to represent entities of the real world 'Complex Data', such as users,
