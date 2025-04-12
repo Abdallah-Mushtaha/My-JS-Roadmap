@@ -14,4 +14,14 @@ This folder contains everything I have learned and am learning in JavaScript, in
 - Modules
 - Bundling Tools
 
-This will serve as a reference for my JavaScript journey. 🚀
+This will serve as a personal reference for my JavaScript journey. 🚀
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.  
+© 2025 Abdallah Mushtaha. All rights reserved.
+
+Feel free to use this content for learning and educational purposes.  
+Credit is appreciated! 🚀
