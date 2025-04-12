@@ -20,7 +20,6 @@ This will serve as a personal reference for my JavaScript journey. 🚀
 
 ## 📄 License
 
-This project is licensed under the MIT License.  
 © 2025 Abdallah Mushtaha. All rights reserved.
 
 Feel free to use this content for learning and educational purposes.  
